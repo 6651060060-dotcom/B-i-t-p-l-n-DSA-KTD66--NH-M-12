@@ -1,0 +1,21 @@
+void displayQueue() const {
+        if (isEmpty()) {
+            cout << "\n[!] Hang doi thanh toan hien dang rong!\n";
+            return;
+        }
+        cout << "\n=========== DANH SACH DON HANG DANG CHO THANH TOAN (QUEUE) ===========\n";
+        cout << khoangTrang("Ma Don", 10)
+             << khoangTrang("Ten Khach Hang", 25)
+             << khoangTrang("Tong Tien (VND)", 20) << endl;
+        cout << string(60, '-') << endl;
+
+        OrderNode* current = front;
+        while (current != NULL) {
+            cout << khoangTrang(numToString(current->orderId), 10)
+                 << khoangTrang(current->customerName, 25)
+                 << khoangTrang(numToString((long long)current->totalAmount), 20) << endl;
+            current = current->next;
+        }
+        cout << string(60, '-') << endl;
+    }
+};
