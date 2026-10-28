@@ -1,0 +1,27 @@
+void addItem(int id, string name, double price, int soLuong) {
+        if (soLuong <= 0) {
+            cout << "-> Loi: So luong phai lon hon 0!\n";
+            return;
+        }
+        ItemNode* current = head;
+        while (current != NULL) {
+            if (current->id == id) {
+                current->soLuong += soLuong;
+                cout << "-> Da cap nhat so luong san pham \"" << name << "\" trong gio: " << current->soLuong << "\n";
+                return;
+            }
+            current = current->next;
+        }
+
+        ItemNode* newItem = new ItemNode(id, name, price, soLuong);
+        if (head == NULL) {
+            head = newItem;
+        } else {
+            ItemNode* temp = head;
+            while (temp->next != NULL) {
+                temp = temp->next;
+            }
+            temp->next = newItem;
+        }
+        cout << "-> Da them mon \"" << name << "\" vao gio hang!\n";
+    }
