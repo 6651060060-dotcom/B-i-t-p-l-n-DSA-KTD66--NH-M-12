@@ -1,0 +1,18 @@
+bool capNhatSoLuong(int id, int soLuongMoi) {
+        ItemNode* current = head;
+        while (current != NULL) {
+            if (current->id == id) {
+                if (soLuongMoi <= 0) {
+                    removeItem(id);
+                    cout << "-> So luong <= 0, da xoa san pham khoi gio hang.\n";
+                } else {
+                    current->soLuong = soLuongMoi;
+                    cout << "-> Da cap nhat so luong san pham [Ma " << id << "] thanh: " << soLuongMoi << "\n";
+                }
+                return true;
+            }
+            current = current->next;
+        }
+        cout << "-> Khong tim thay san pham co ma " << id << " trong gio hang!\n";
+        return false;
+    }
