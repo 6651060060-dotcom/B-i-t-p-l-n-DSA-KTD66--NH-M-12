@@ -1,0 +1,22 @@
+bool removeItem(int id) {
+        if (head == NULL) return false;
+
+        if (head->id == id) {
+            ItemNode* temp = head;
+            head = head->next;
+            delete temp;
+            return true;
+        }
+
+        ItemNode* current = head;
+        while (current->next != NULL && current->next->id != id) {
+            current = current->next;
+        }
+        if (current->next != NULL) {
+            ItemNode* temp = current->next;
+            current->next = temp->next;
+            delete temp;
+            return true;
+        }
+        return false;
+    }
