@@ -1,5 +1,6 @@
 Nhóm 12
 Đề tài: Hệ thống Quản lý Giỏ hàng & Xử lý Đơn hàng Mini.
+
 Mô tả đề tài:đề tài là là "Xây dựng Hệ thống Quản lý Giỏ hàng và Hàng đợi Thanh toán" (Shopping Cart & Payment Queue Management System).
 Mục tiêu của đề tài là giải quyết bài toán quản lý quy trình mua sắm của khách hàng qua 2 giai đoạn chính:
 +Lựa chọn & Tích lũy hàng hóa (Quản lý giỏ hàng cá nhân).
